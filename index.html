@@ -1,99 +1,84 @@
 ---
 layout: bootcamp
 root: .
-venue: Euphoric State University
-address: 123 College Street, Euphoria
-country: United-States
-humandate: Feb 17-18, 2020
-humantime: 9:00 am - 4:30 pm
-startdate: 2020-06-17
-enddate: 2020-06-18
-latlng: 41.7901128,-87.6007318
-registration: restricted
-instructor: ["Grace Hopper", "Alan Turing"]
-contact: admin@software-carpentry.org
+venue: University of Melbourne
+address: <a href="http://maps.unimelb.edu.au/parkville/building/104#.Uw0fhPiLelM">Theatre 3, Alan Gilbert Building</a>
+country: Australia
+humandate: Sep 15, 18, 22 & 25, 2014
+humantime: 1:30 pm - 5:00 pm
+startdate: 2014-09-15
+enddate: 2014-09-25
+latlng: -37.7963,144.9614
+registration: open
+instructor: ["Damien Irving", "Scott Ritchie"]
+contact: d.irving@student.unimelb.edu.au
 ---
-<!--
-    Edit the values in the parameter block above to be appropriate for your bootcamp.
-    Please use three-letter month names for the 'humandate' field.
--->
 
-<!-- Remove the block below. -->
-<div align="center">
-  <p><strong><em>
-      This page is a template for bootcamp home pages.
-      <br/>
-      Please see
-      <a href="https://github.com/swcarpentry/bc">https://github.com/swcarpentry/bc</a>
-      for instructions on how to create
-      a repository for your bootcamp.
-  </em></strong></p>
-</div>
 
-<!--
-    This block includes the Eventbrite registration widget if 'eventbrite' has been set in the header.
--->
-{% if page.eventbrite %}
-<iframe src="http://www.eventbrite.com/tickets-external?eid={{page.eventbrite}}&ref=etckt" frameborder="0" width="100%" scrolling="auto"></iframe>
-{% endif %}
-
-<h2>General Information</h2>
+<h2>Python Bootcamp</h2>
 
 <p>
-  <a href="http://software-carpentry.org">Software Carpentry</a>'s mission
-  is to help scientists and engineers become more productive
-  by teaching them basic lab skills for computing
-  like program design, version control, data management, and task automation.
-  This two-day hands-on bootcamp will cover basic concepts and tools;
-  participants will be encouraged to help one another
-  and to apply what they have learned to their own research problems.
+  Researchers spend much of their time wrestling with software, but most
+  are self-taught programmers. As a result, they spend hours doing things that
+  should take minutes, reinvent a lot of wheels, and still don't know if their
+  results are reliable. To tackle this problem, an international volunteer organisation
+  known as <a href="http://software-carpentry.org">Software Carpentry</a> has been
+  running <a href="http://software-carpentry.org/bootcamps/">bootcamps</a> for a number 
+  of years now, teaching basic lab skills for computing like program design, version 
+  control, data management and task automation. With support from the 
+  <a href="https://its.unimelb.edu.au/research">ITS Research Services</a> department, 
+  <a href="https://github.com/resbaz/hackerwin">The Hacker Within</a> student group has 
+  been running Software Carpentry bootcamps at the University of Melbourne since 2013. 
+  For this particular bootcamp we are teaming up with 
+  <a href="http://www.florey.edu.au/students/florey-students-sofi-">SOFI</a> and 
+  <a href="http://www.chemeng.unimelb.edu.au/industry/pace.html">PACE</a>, although there 
+  are places available for Melbourne researchers who aren't members of those student groups.    
 </p>
 
 <!-- This block displays the instructors' names if they are available. -->
 {% if page.instructor %}
 <p>
   <strong>Instructors:</strong>
-  {{page.instructor | join: ', ' %}}
+  {{page.instructor | join: ', ' %}} (instructors and helpers should indicate their 
+  availability <a href="">here</a>)
 </p>
 {% endif %}
 
-<!--
-    Modify this block to reflect the target audience for your bootcamp.
-    In particular, if it is only open to people from a particular institution,
-    or if specialized prerequisite knowledge is required, please mention that.
--->
 <p>
   <strong>Who:</strong>
-  The course is aimed at graduate students and other researchers.
+  This bootcamp is open to postgraduate students, post-docs and other researchers who have a basic  
+  familiarity with programming concepts like loops, conditionals, and arrays, but need 
+  help to translate this knowledge into practical tools to help them work more productively.
+  While the bootcamp is being hosted at the University of Melbourne in conjunction with
+  with SOFI and PACE, people from other research institutions and disciplines are welcome. 
 </p>
 
-<!--
-    This block displays the address and links to a map showing directions.
--->
-{% if page.latlng %}
 <p>
   <strong>Where:</strong>
-  {{ page.address }}.
-  Get directions with
-  <a href="http://www.openstreetmap.org/?mlat={{ page.latlng | replace:',','&mlon=' }}&zoom=16">OpenStreetMap</a>
-  or
-  <a href="http://maps.google.com/maps?q={{ page.latlng }}">Google Maps</a>.
+  Theatre 3, <a href="http://maps.unimelb.edu.au/parkville/building/104#.Uw0fhPiLelM">Alan Gilbert Building</a>, 
+  University of Melbourne. 
 </p>
-{% endif %}
 
-<!--
-    Modify the block below if there are any special requirements.
--->
+<p>
+  <strong>Registration:</strong>
+  All participants are required to register at the 
+  <a href="">Eventbrite page</a>.
+  The registration process involves a 5-minute questionnaire about your previous programming experience,
+  so that we can tailor the teaching materials to the knowledge of the audience.
+</p>
+
 <p>
   <strong>Requirements:</strong>
-  Participants must bring a laptop with a few specific software packages installed
-  (listed below).
+  Participants are asked to bring their laptop. They will be given access to the 
+  <a href="https://its.unimelb.edu.au/research/our_services/cloud_computing/research_cloud">NeCTAR Research Cloud</a> 
+  for the duration of the bootcamp (and beyond), so it's critical that this laptop is able
+  to connect to either the UniWireless or Eduroam wifi networks. As a backup measure (i.e.
+  in the event that a wifi connection is unavailable) participants are asked to install 
+  some specific software packages (see the setup instructions below for wifi and software 
+  details). If you don't have a laptop, that's completely fine. We'll pair you up with 
+  someone who does.
 </p>
 
-<!--
-    This block automatically inserts a contact email address if one has been specified for the page.
-    If one hasn't, this block inserts the generic contact address for Software Carpentry.
--->
 <p>
   <strong>Contact</strong>:
   Please mail
@@ -107,42 +92,60 @@ contact: admin@software-carpentry.org
 
 <hr/>
 
-<!--
-    Edit this block to show the syllabus and schedule for your bootcamp.
--->
 <h2>Schedule</h2>
+<p>
+  In order to accommodate as many people as possible, we are going to spread the
+  content of the typical two-day bootcamp over four afternoon sessions. The following 
+  is an outline of what will be taught. During the bootcamp, additional notes on the 
+  teaching materials will be available at the bootcamp 
+  <a href="https://etherpad.mozilla.org/2014-09-15-unimelb">Etherpad</a>.
+</p>
 
-<table class="table table-striped">
-  <tr> <td>Monday</td>  <td>09:00</td>  <td>Introduction to task automation with the Unix shell</td> </tr>
-  <tr> <td></td>        <td></td>       <td>Coffee will be served at 10:30.</td> </tr>
-  <tr> <td></td>        <td>12:00</td>  <td>Lunch break</td> </tr>
-  <tr> <td></td>        <td>13:00</td>  <td>Building programs with Python</td> </tr>
-  <tr> <td></td>        <td></td>       <td>Coffee will be served at 14:30.</td> </tr>
-  <tr> <td></td>        <td>16:00</td>  <td>Wrap-up</td> </tr>
-  <tr> <td>Tuesday</td> <td>09:00</td>  <td>Version control with Git</td> </tr>
-  <tr> <td></td>        <td></td>       <td>Coffee will be served at 10:30.</td> </tr>
-  <tr> <td></td>        <td>12:00</td>  <td>Lunch break</td> </tr>
-  <tr> <td></td>        <td>13:00</td>  <td>Managing data with SQL</td> </tr>
-  <tr> <td></td>        <td></td>       <td>Coffee will be served at 14:30.</td> </tr>
-  <tr> <td></td>        <td>15:00</td>  <td>Putting it all together</td> </tr>
-  <tr> <td></td>        <td>16:00</td>  <td>Wrap-up</td> </tr>
-</table>
+<p>
+  <strong>Session 1: The basics</strong><br />
+  <em>Monday 15 September, 1:30-5:00pm</em><br />
+  The key to being a proficient programmer is solid fundamentals. In this session
+  you'll learn the basics of the unix shell, which is the cornerstone of software
+  carpentry.
+  <br /><br />
+
+  <strong>Sessions 2 & 3: Programming like a programmer</strong><br />
+  <em>Thursday 18 September, 1:30-5:00pm</em><br />
+  <em>Monday 22 September, 1:30-5:00pm</em><br />
+  Have you ever wondered how professional programmers write code? In this session
+  you'll learn the common tricks of the trade, via an introduction to the Python
+  programming language. From defensive programming, error handling and debugging
+  to unit testing and test-driven development, the skills learned in this session
+  are transferrable to any language.
+  <br /><br />
+
+  <strong>Session 4: Version control</strong><br />
+  <em>Thursday 25 September, 1:30-5:00pm</em><br />
+  Do you work in a small research team that shares code? Do you struggle to keep
+  track of multiple versions of the same code? Would you like an easier way to backup
+  your work? This session will teach you everything you need to know about git,
+  a version control system that can solve all these problems and more.
+  <br /><br />
+
+</p>
 
 <hr/>
 
-<!--
-    Edit the setup instructions in _includes/setup.html to reflect your bootcamp.
-    (In particular, most bootcamps teach either Python or R, not both.)
--->
 
 <h2>Setup</h2>
 
 <p>
-  To participate in a Software Carpentry bootcamp, 
-  you will need working copies of the software described below.
-  Please make sure to install everything
-  (or at least to download the installers)
-  <em>before</em> the start of your bootcamp.
+  Prior to the bootcamp, University of Melbourne staff/students should ensure that their laptop can connect
+  to UniWireless. Instructions on how to do this and where to get assistance can be found 
+  <a href="https://its.unimelb.edu.au/help/networks-access/networks-internet/connect-wireless/unimelb">here</a>.
+  Attendees from other Australian universities should find out (from the IT website of 
+  their home institution) how to connect to the Eduroam wireless network.
+</p>
+<p>
+  Besides a working wifi connection, you will also need working copies of the 
+  software described below (as a backup measure, because if the wifi is down we will be 
+  unable to access to the NeCTAR Research Cloud). Please make sure to install everything 
+  <em>before</em> the start of the bootcamp.
 </p>
 
 {% include setup.html %}
